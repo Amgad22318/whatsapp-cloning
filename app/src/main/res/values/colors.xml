@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#21C55A</color>
+    <color name="white">#FFFF</color>
+    <color name="mainBackground">#FAFAFA</color>
+    <color name="Icon_String_colors">#80AFAC</color>
+    <color name="toolbar_background">#075E55</color>
+    <color name="Black">#000</color>
+    <color name="Recent_updated_view">#F4F4F4</color>
+    <color name="borders">#35B49C</color>
+    <color name="Status_add_text_background">#EEF5F7</color>
+    <color name="status_add_text_icon">#557274</color>
+    <color name="camera_tab">#80AFAC</color>
+    <color name="sended_message_color">#E2FFC7</color>
+<color name="offwhite_background">#EDEDED</color>
+    <color name="sign_btn_color">#01E675</color>
+    <color name="light_gray">#D6F2F3</color>
+
+
+</resources>

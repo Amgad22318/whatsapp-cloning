@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="View contact"
+        ></item>
+    <item
+        android:title="Media"
+        ></item>
+    <item
+        android:title="Search"
+        ></item>
+    <item
+        android:title="Mute notifications"
+        ></item>
+    <item
+        android:title="Wallpaper"
+        ></item>
+    <item
+        android:title="More"
+
+        android:icon="@drawable/ic_call"
+        ></item>
+
+</menu>

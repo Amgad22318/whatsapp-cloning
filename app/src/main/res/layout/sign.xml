@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offwhite_background"
+    tools:context=".Sign">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/sign_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_background"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/verify_your_phone_number"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/please_confirm_your_country_code"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="@string/please_confirm_your_country_code"
+                android:textColor="@color/Black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+
+                android:id="@+id/country_spinner"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/please_confirm_your_country_code"></Spinner>
+
+            <ImageView
+
+                android:id="@+id/country_spinner_icon"
+                android:layout_width="60dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_arrow_drop_down"
+                app:layout_constraintBottom_toBottomOf="@id/country_spinner"
+                app:layout_constraintEnd_toEndOf="@id/country_spinner"
+                app:layout_constraintTop_toTopOf="@id/country_spinner" />
+
+            <EditText
+                android:id="@+id/user_phoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="50dp"
+                android:gravity="start|center"
+                android:hint="@string/phone_number_hint"
+                android:inputType="phone"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/user_phoneNumber_countryKey"
+                app:layout_constraintTop_toBottomOf="@id/country_spinner" />
+
+            <EditText
+                android:id="@+id/user_phoneNumber_countryKey"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="50dp"
+                android:drawableStart="@drawable/ic_plus"
+                android:gravity="start|center"
+                android:inputType="phone"
+                android:maxLength="8"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@id/user_phoneNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/country_spinner" />
+
+            <Button
+                android:id="@+id/sign_btn"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/sign_btn_color"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_phoneNumber" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

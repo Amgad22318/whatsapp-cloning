@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circcleImageViewCalls"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TextViewCalls_name"
+            android:layout_width="215dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="5dp"
+            android:gravity="start|bottom"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/TextViewCalls_Time"
+            app:layout_constraintStart_toEndOf="@id/circcleImageViewCalls"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+
+            android:id="@+id/imageviewCalls_call_direction"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toEndOf="@id/circcleImageViewCalls"
+            app:layout_constraintTop_toBottomOf="@id/TextViewCalls_name" />
+
+        <TextView
+            android:id="@+id/TextViewCalls_Time"
+            android:layout_width="215dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="2dp"
+            android:gravity="start|top"
+            android:text="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageviewCalls_call_direction"
+            app:layout_constraintTop_toBottomOf="@id/TextViewCalls_name" />
+
+
+        <ImageButton
+            android:id="@+id/imageButtonCalls_VideoOrCall"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/mainBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/TextViewCalls_Time"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.chat">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:dividerHeight="0.3dp"
+        android:id="@+id/chats_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="true"/>
+
+</FrameLayout>

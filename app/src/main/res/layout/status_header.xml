@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/view_recent_updates"
+        android:id="@+id/circcleImageView_mystatus"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/my_photo" />
+
+    <TextView
+        android:id="@+id/mystatus_username"
+        app:layout_constraintStart_toEndOf="@id/circcleImageView_mystatus"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="230dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="7dp"
+        android:ellipsize="end"
+        android:gravity="start|bottom"
+        android:maxLines="1"
+        android:text="My status"
+        android:textColor="@color/Black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/mystatus_tapToAddStatus"
+        app:layout_constraintStart_toEndOf="@id/circcleImageView_mystatus"
+        app:layout_constraintTop_toBottomOf="@id/mystatus_username"
+        android:layout_width="230dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="15dp"
+        android:ellipsize="end"
+        android:gravity="start|top"
+        android:maxLines="1"
+        android:text="Tap to add status update"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/view_recent_updates"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mystatus_tapToAddStatus"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/Recent_updated_view"
+        android:gravity="start|center"
+        android:text="    Recent updates"
+        android:textStyle="bold"></TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

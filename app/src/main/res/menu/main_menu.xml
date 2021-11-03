@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+
+    <item
+
+        android:title="New group"
+        ></item>
+
+    <item
+    android:title="New broadcast"
+    ></item>
+    <item
+        android:title="WhatsApp Web"
+        ></item>
+    <item
+        android:title="Starred messages"
+        ></item>
+
+    <item
+
+        android:title="Setting"
+        ></item>
+    <item
+        android:title="update profile picture"
+        android:id="@+id/update_prof_pic"
+        ></item>
+
+    <item
+        android:title="Sign Out"
+        android:id="@+id/sign_out_menuItem"
+        ></item>
+
+
+</menu>
+

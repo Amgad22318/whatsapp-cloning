@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chat_background"
+    tools:context=".Person_Chat">
+
+    <ListView
+android:divider="@null"
+        android:stackFromBottom="true"
+        android:transcriptMode="normal"
+        android:id="@+id/message_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/type_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chat_toolbar"></ListView>
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/chat_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/toolbar_background"
+        android:theme="@style/AppTheme"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:id="@+id/Chating_withPesrson_photo"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/Chating_withPerson_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Chating_withPerson_name"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+
+                android:gravity="start|center"
+                android:paddingStart="10dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/Chating_withPesrson_photo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/chat_make_call"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@color/toolbar_background"
+                android:src="@drawable/ic_call_white_chat"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+            <ImageButton
+                android:id="@+id/chat_make_VideoCall"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="@color/toolbar_background"
+                android:src="@drawable/ic_videocall_white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/chat_make_call"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/toolbar_background"
+        android:clickable="true"
+        android:src="@drawable/ic_mic_black_24dp"
+        app:borderWidth="0dp"
+        app:fabCustomSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/type_message"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="7.5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/chat_edittext_design"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/mic"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/emoji_btn"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_insert_emoticon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+
+            android:id="@+id/edittext_msg_place"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@null"
+
+            android:gravity="start|center"
+            android:hint="Type a message"
+            android:textColor="@color/Black"
+
+            app:layout_constraintStart_toEndOf="@id/emoji_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/add_Media"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+
+            android:src="@drawable/ic_attach_media"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/take_photo"
+            app:layout_constraintStart_toEndOf="@id/edittext_msg_place"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+
+            android:id="@+id/take_photo"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="12dp"
+            android:backgroundTint="@color/white"
+
+            android:src="@drawable/ic_take_photo_offwhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/add_Media"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
